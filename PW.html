@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modelo de Machine Learning</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-top: 40px;
+            text-transform: uppercase;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border: none;
+            background-color: #292929;
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 15px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #007acc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-transform: uppercase;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0055a4;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Modelo de Machine Learning</h1>
+    <form method="POST">
+        <label for="var1">Variable 1:</label>
+        <input type="number" name="var1" step="0.01" required><br>
+        <label for="var2">Variable 2:</label>
+        <input type="number" name="var2" step="0.01" required><br>
+        <label for="var3">Variable 3:</label>
+        <input type="number" name="var3" step="0.01" required><br>
+        <label for="var4">Variable 4:</label>
+        <input type="number" name="var4" step="0.01" required><br>
+        <label for="var5">Variable 5:</label>
+        <input type="number" name="var5" step="0.01" required><br>
+        <label for="var6">Variable 6:</label>
+        <input type="number" name="var6" step="0.01" required><br>
+        <button type="submit">Pronosticar</button>
+    </form>
+
+    {% if prediction %}
+    <h2>Resultado:</h2>
+    <p>{{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
